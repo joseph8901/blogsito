@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilo02.css">
+</head>
+<body>
+    <div class="badge badge-primary text-wrap" style="width: 6rem;">
+        Ejercicio 02
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6">
+                <p>a. Modificar el estilo: Color</p>
+                <div>
+                    <p> Fondo: 
+                        <button onclick="fondo(1)" class="rojo"></button>
+                        <button onclick="fondo(2)" class="azul"></button>
+                        <button onclick="fondo(3)" class="verde"></button>
+                        <button onclick="fondo(4)" class="amarillo"></button>
+                    </p>
+                    <div id="d1"></div>
+                    <p> Borde:
+                        <button class="negro"></button>
+                        <button class="blanco"></button>
+                        <button class="violeta"></button>
+                        <button class="rosado"></button>
+                    </p>
+                </div>
+            </div>
+            <div class="col-6">
+                <p>b. Modificar el estilo: Opacidad</p>
+                <div>
+                    <img src="imagen/machupicchu.jpg" alt="Machupicchu">
+                </div>
+                <br/>
+                <p>
+                    <button onclick="myFunction()" class="btn btn-dark btn-lg">Opacar</button>
+                    <button class="btn btn-light btn-lg">Aclarar</button>
+                </p>
+                
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-6">
+                <p>c. Modificar el estilo: Ocultar</p>
+                <div class="alert alert-success" role="alert">
+                    Este mensaje desaparecerá...
+                    <button onclick="cerrar()"  type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                </div>
+            </div>
+            <div class="col-6">
+                <p>d. Modificar el estilo: Aparecer</p>
+                <div><button class="btn btn-danger">Mostrar Modal</button></div>
+                <!--Modal-->
+                <div class="modal fade" id="modal">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title">Modal Ejercicio 02</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          Este modal es controlado por JS
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-danger">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <!--Fin Modal-->
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    //Escriba aquí
+function fondo(n){
+    var color=document.getElementById("d1");
+    if(n===1){
+        color.style.backgroundColor="red";
+    }
+    else if(n===2){
+        color.style.backgroundColor="blue";
+    }
+    else if(n===3){
+        color.style.backgroundColor="green";
+    }
+    else {
+        color.style.backgroundColor="yellow";
+    }
+
+}
+function cerrar(){
+    var cerrar = document.getElementsByClassName("alert alert-success")[0];
+    cerrar.style.display="none";
+}
+function myFunction() {
+  document.getElementById("myDIV").style.opacity = "0.5";
+
+</script>
+</body>
+</html>
